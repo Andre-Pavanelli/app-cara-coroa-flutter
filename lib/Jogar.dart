@@ -1,5 +1,5 @@
+import 'dart:math';
 import 'package:flutter/material.dart';
-
 import 'Resultado.dart';
 
 class Jogar extends StatefulWidget {
@@ -10,10 +10,15 @@ class Jogar extends StatefulWidget {
 class _JogarState extends State<Jogar> {
 
   void _exibirResultado(){
+
+    var itens = ["cara","coroa"];
+    var numero = Random().nextInt(itens.length);
+    var resultado = itens[numero];
+
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => Resultado()
+        builder: (context) => Resultado(resultado)
       ));
   }
 
