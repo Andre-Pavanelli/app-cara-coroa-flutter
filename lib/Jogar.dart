@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'Resultado.dart';
+
 class Jogar extends StatefulWidget {
   @override
   _JogarState createState() => _JogarState();
@@ -8,7 +10,11 @@ class Jogar extends StatefulWidget {
 class _JogarState extends State<Jogar> {
 
   void _exibirResultado(){
-
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => Resultado()
+      ));
   }
 
   @override
